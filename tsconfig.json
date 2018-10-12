@@ -5,7 +5,10 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+<<<<<<< HEAD
     "module": "es2015",
+=======
+>>>>>>> ef17b40744a08fd3cabb9b2aa151ec2bae3132a4
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

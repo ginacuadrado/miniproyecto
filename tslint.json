@@ -65,7 +65,10 @@
     ],
     "no-misused-new": true,
     "no-non-null-assertion": true,
+<<<<<<< HEAD
     "no-redundant-jsdoc": true,
+=======
+>>>>>>> ef17b40744a08fd3cabb9b2aa151ec2bae3132a4
     "no-shadowed-variable": true,
     "no-string-literal": false,
     "no-string-throw": true,
