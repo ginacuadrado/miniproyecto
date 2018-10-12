@@ -1,10 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DetallesComponent } from './dashboard/detalles/detalles.component';
+import { DetallesComponent } from './detalles/detalles.component';
+import { EntradasComponent } from './entradas/entradas.component';
+import { ServicioService } from './servicios/servicio.service';
 
 const appRoutes: Routes = [
   {
@@ -12,9 +15,9 @@ const appRoutes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'dashboard/detalles',
-    component: DetallesComponent
-  },
+    path: 'detalles',
+    component: DetallesComponent,
+    children: [ {path: ':id', component: DetallesComponent} ]},
   {
     path: '',
     redirectTo: '/dashboard',
@@ -26,13 +29,15 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    DetallesComponent
+    DetallesComponent,
+    EntradasComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

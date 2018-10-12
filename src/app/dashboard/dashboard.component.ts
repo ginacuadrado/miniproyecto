@@ -1,21 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { LecturaService } from './lectura.service';
-
+import { Component, OnInit} from '@angular/core';
+import { ServicioService } from '../servicios/servicio.service';
+import { Pokemon } from '../InfoPoke/Pokemon';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  providers: [LecturaService]
 
 })
 
 export class DashboardComponent implements OnInit {
 
- 
-  constructor() { }
+  public pokemon = [];
+
+  title="◈Pokédex◈";
+
+  constructor(private ss: ServicioService) { }
 
   ngOnInit() {
+   
+    this.ss.getJSON().subscribe(data => this.pokemon = data);
+    };
   }
 
-}
+  
