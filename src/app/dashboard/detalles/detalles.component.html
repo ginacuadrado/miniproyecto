@@ -1,0 +1,26 @@
+
+<!--Implementación del DATA BINDING-->
+<div class="container" >
+    <img [src]="pokemon.art_url" >
+    <div class="card-body text-center">
+      <h1 class="number text-left"> N.° {{ pokemon.pkdx_id | number:"3.0" }}</h1>
+      <br>
+      <h1 class="name text-left">{{ pokemon.name }}</h1>
+    </div>
+</div>
+<div class="container">
+<p style="text-align: justify">
+<br>
+<strong>Description: </strong>  {{pokemon.description}}
+<br>
+<strong>Type: </strong>  
+<li>{{pokemon.types[0]}}/{{pokemon.types[1]}}</li>
+
+<br>
+
+<!-- <strong>Evolution: </strong>  {{pokemon.evolutions[0].to}}
+<li> {{pokemon.evolutions[0].level}} </li>
+<li> {{pokemon.evolutions[0].method}} </li> -->
+
+</p>
+</div>

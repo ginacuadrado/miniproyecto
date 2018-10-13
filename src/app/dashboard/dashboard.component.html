@@ -1,5 +1,5 @@
 
-<!--<div style="text-align: center" >
+<div style="text-align: center" >
 
     <img width="50%" alt="Banner Pokedex" src="../assets/logo.png">
 
@@ -7,19 +7,10 @@
 
 <h1 style="text-align: center" > {{title}} </h1>
 
-<div class="contenedor">
+<div class="contenedor" style="text-align: center">
     
-    <img src="../assets/Pikachu.png">
+    <div  *ngFor = "let pokemon of pokemon">    <!--IMPLEMENTACIÓN DEL NGFOR Y DEL DATA BINDING-->
+       <app-detalles [pokemon]="pokemon"></app-detalles>
+</div>
 
-</div>-->
-
-
-<div *ngFor = "let pokemon of pokemon">
-        <div class="card clickable" (click)="(pokemon.name)">
-                <img class="card-img-top thumbnail bg-dark p-2" [src]="pokemon.art_url" >
-                <div class="card-body text-center">
-                  <h5 class="number text-left"> N.° {{ pokemon.pkdx_id | number:"3.0" }}</h5>
-                  <h5 class="name text-left">{{ pokemon.name }}</h5>
-                </div>
-              </div>
 </div>

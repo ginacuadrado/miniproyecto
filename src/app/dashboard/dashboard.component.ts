@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
 
   public pokemon = [];
 
-  title="◈Pokédex◈";
+  title="◈ Pokédex ◈";
 
   constructor(private ss: ServicioService) { }
 

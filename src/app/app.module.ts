@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DetallesComponent } from './detalles/detalles.component';
-import { EntradasComponent } from './entradas/entradas.component';
+import { DetallesComponent } from './dashboard/detalles/detalles.component';
 import { ServicioService } from './servicios/servicio.service';
+
+//IMPLEMENTACIÓN DEL ROUTING.
 
 const appRoutes: Routes = [
   {
@@ -29,8 +30,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     DashboardComponent,
-    DetallesComponent,
-    EntradasComponent
+    DetallesComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {Pokemon} from '../InfoPoke/Pokemon';
 import { Observable } from 'rxjs';
 
-@Injectable({
+@Injectable({                   //IMPLEMENTACIÓN DEL SERVICIO.
   providedIn: 'root'
 })
 
